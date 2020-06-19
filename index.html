@@ -1,25 +1,28 @@
 <!DOCTYPE html>
 <html>
 <title>True Balance</title>
-
+<head>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
 <script type="text/javascript">
-var $form;
-$form = $('form#test-form'), url = 'https://script.google.com/macros/s/AKfycbwlD47AJ3RWo0S5RuUJLxREY_n09ISeE0O5HXmw1oGt2JGW_k3U/exec'
+	var $form;
+	$form = $('form#test-form'), url = 'https://script.google.com/macros/s/AKfycbwlD47AJ3RWo0S5RuUJLxREY_n09ISeE0O5HXmw1oGt2JGW_k3U/exec'
 
-$('#submit-form').on('click', function(e) {
-  e.preventDefault();
-  var jqxhr = $.ajax({
-    url: url,
-    method: "GET",
-    dataType: "json",
-    data: $form.serializeObject()
-  }).success(
-  );
-})
+	$('#submit-form').on('click', function(e) {
+	e.preventDefault();
+	var jqxhr = $.ajax({
+	url: url,
+	method: "GET",
+	dataType: "json",
+	data: $form.serializeObject()
+	}).success(
+	);
+	})
 </script>
+</head>
 
 <form id="test-form">
-<header1>Version1.08</header>
+<header1>Version1.09</header>
   <div>
     <label>Expense</label>
     <input type="text" name="expense" placeholder="Field 1"/>
