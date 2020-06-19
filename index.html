@@ -44,17 +44,21 @@
 	-->
 		<button type="submit" id="submit"  class="submitbtn btn-primary">Submit</button>
 		</div>
-			<div class="txtbox">
+		<pre id='data'></pre>
+		<div class="txtbox">
 		  <small class="form-text text-muted confirm"></small>
 		</div>
 	</form>
 </body>
 
- <script>
-	$.ajax("https://docs.google.com/spreadsheet/pub?key=0Auwt3KepmdoudE1iZFVFYmlQclcxbW85YzNZSTYyUHc&single=true&gid=0&range=b5&output=csv").done(function(result){
-                alert(result);
-            });
- 
+<script>
+  const onDataLoaded = (data) => {
+    const e20Content = data.feed.entry.find((entry) => entry.title.$t == 'E20').content.$t
+    document.getElementById('data').innerHTML = e20Content
+  }
+</script>	
+<script src="https://spreadsheets.google.com/feeds/cells/2PACX-1vTz90TdYHsGhv3DrpRa1-o2jYhL9jjh7h_OiNQx2sr_BMGB7w15-lGKEPbs0i8KiguRfSyQD6ZsrQpl/1/public/basic?alt=json-in-script&callback=onDataLoaded"></script>	
+<script>
 	$(document).ready(function(){
 	  $.fn.serializeObject = function()
 		  {
