@@ -1,39 +1,68 @@
 <!DOCTYPE html>
 <html>
 <title>True Balance</title>
-<head>
-<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-<script type="text/javascript">
-	var $form;
-	$form = $('form#test-form'), url = 'https://script.google.com/macros/s/AKfycbwlD47AJ3RWo0S5RuUJLxREY_n09ISeE0O5HXmw1oGt2JGW_k3U/exec'
+  <form id="test-form">
+    <div class="form-group">
+      <label for="full_name" name="full_name">Contact me if you like :)</label>
+      <input type="full_name" name="full_name" class="form-control" id="full_name" placeholder="Full Name">
+    </div>
+    <div class="form-group">
+      <input type="phone_number" name="phone_number" class="form-control" id="phone_number" aria-describedby="emailHelp" placeholder="Phone Number">
+      <small id="phone_number" class="form-text text-muted"></small>
+    </div>
+    <div class="form-group">
+      <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+      <small id="email" class="form-text text-muted thanks">I'll never share your info with anyone else.</small>
+    </div>
+    <!--<div class="form-check">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+    </div>-->
+    <div>
+    <button type="submit" id="submit"  class="btn btn-primary">Submit</button>
+    </div>
+  </form>
 
-	$('#submit-form').on('click', function(e) {
-	e.preventDefault();
-	var jqxhr = $.ajax({
-	url: url,
-	method: "GET",
-	dataType: "json",
-	data: $form.serializeObject()
-	}).success(
-	);
-	})
-</script>
-</head>
 
-<form id="test-form">
-<header1>Version1.10</header>
-  <div>
-    <label>Expense</label>
-    <input type="text" name="expense" placeholder="Field 1"/>
-  </div>
 
-  <div>
-    <label>Note</label>
-    <input type="text" name="note" placeholder="Field 2"/>
-  </div>
+  <script>
+        $(document).ready(function(){
+          $.fn.serializeObject = function()
+              {
+               var o = {};
+               var a = this.serializeArray();
+               $.each(a, function() {
+                   if (o[this.name]) {
+                       if (!o[this.name].push) {
+                           o[this.name] = [o[this.name]];
+                       }
+                       o[this.name].push(this.value || '');
+                   } else {
+                       o[this.name] = this.value || '';
+                   }
+               });
+               return o;
+              };
+            var form = $('form#test-form'),
+              url = 'https://script.google.com/macros/s/AKfycbwlD47AJ3RWo0S5RuUJLxREY_n09ISeE0O5HXmw1oGt2JGW_k3U/exec';
+              form.submit(function(e){
+                e.preventDefault();
+              var jqxhr = $.ajax({
+                url: url,
+                method: "GET",
+                dataType: "json",
+                data: form.serializeObject()
+              });
+                $(".thanks").html("Thank you for getting in touch!").css("font-size","4rem");
+                $(".form-control").remove();
+                $("#submit").remove();
+              });
+            });
+        </script>
 
-  <div>
-    <button type="submit"id="submit-form">Submit</button>
-  </div>
-</form>
+
+<script
+    src="http://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
 </html>
