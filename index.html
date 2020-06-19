@@ -32,7 +32,7 @@
 <body>
 	<header1>True Balance</header1>
 	<form id="test-form">
-		<a style="font-size: 5;">version 1.11</a>
+		<a style="font-size: 5;">version 1.12</a>
 		<div class="txtbox">
 		  <input type="expense" name="expense" class="form-control" id="expense" placeholder="Amount">
 		</div>
@@ -53,8 +53,8 @@
 
 <script>
   const onDataLoaded = (data) => {
-    const e20Content = data.feed.entry.find((entry) => entry.title.$t == 'E20').content.$t
-    document.getElementById('data').innerHTML = e20Content
+    const total = data.feed.entry.find((entry) => entry.title.$t == 'D2').content.$t
+    document.getElementById('data').innerHTML = total
   }
 </script>	
 <script src="https://spreadsheets.google.com/feeds/cells/1IYOk1F3aN4d9_4I4z6edNZt-gVFIet6qOuz1IVF6d8A/1/public/basic?alt=json-in-script&callback=onDataLoaded"></script>	
