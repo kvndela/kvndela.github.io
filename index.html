@@ -30,9 +30,9 @@
 </head>
 
 <body>
-	# True Balance
+	<header1>True Balance</header1>
 	<form id="test-form">
-		<a style="font-size: 5;">version 1.12</a>
+		<a style="font-size: 5;">version 1.11</a>
 		<div class="txtbox">
 		  <input type="expense" name="expense" class="form-control" id="expense" placeholder="Amount">
 		</div>
@@ -51,6 +51,10 @@
 </body>
 
  <script>
+	$.ajax("https://docs.google.com/spreadsheet/pub?key=0Auwt3KepmdoudE1iZFVFYmlQclcxbW85YzNZSTYyUHc&single=true&gid=0&range=b5&output=csv").done(function(result){
+                alert(result);
+            });
+ 
 	$(document).ready(function(){
 	  $.fn.serializeObject = function()
 		  {
