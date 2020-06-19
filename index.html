@@ -2,67 +2,26 @@
 <html>
 <title>True Balance</title>
 <style>
-*{
-margin:0;
-padding:0;
-}
-html, body{
-height:100%;
-}
-
-body{
-background-color:#0c0129;
-background-position:center;
-background-size:cover;
-background-blend-mode:soft-light;
-}
-
-.heading{
-width:600px;
-height:300px;
-margin:auto;
-position:absolute;
-top:0px; bottom:0px; right:0px; left:0px;
-}
-
-.title1{
-display: block;
-text-align: center;
-color:white;
-font-size:60pt;
-font-family:big john;
-}
-
-.title2{
-display:block;
-margin-top:15px;
-text-align: center;
-color:white;
-font-size:14pt;
-font-family:serif;
-}
-
-.submitbtn{
-margin: 50px auto;
-display:block;
-width:180px;
-height:50px;
-border:3px solid white;
-background-color:rgba(255,255,255,0);
-color:white;
-font-family:sans-serif;
-font-weight: bold;
-border-radius: 5px;
-
-transition: background-color 1000ms, color 1000ms;
-}
-.submitbtn:hover{
-background-color:rgba(255,255,255,1);
-color:#222;
-cursor:pointer;
-
-transition: background-color 1000ms, color 1000ms;
-}
+	html, body {
+	margin: 0px;
+	background-color: #010040;
+	text-align: center;
+	font-family: Arial;
+	font-size: 12;
+	color: white;
+	}
+	.submitbtn {
+	background-color: #23b7e5;
+	height: 30px;
+	width: 50%;
+	color: white;
+	border: none;
+	text-decoration: none;
+	}
+	.txtbox {
+	width: 50%;
+	margin: 5px;
+	}
 </style>
 
 <head>
@@ -71,24 +30,22 @@ transition: background-color 1000ms, color 1000ms;
 </head>
 
 <body>
-	<div class="heading">
-		<span class="title1">True Balance</span>
-	</div>
-		<form id="test-form">
-			<a style="font-size: 5;">version 1.10</a>
-		<div>
+	<header1>True Balance</header1>
+	<form id="test-form">
+		<a style="font-size: 5;">version 1.11</a>
+		<div class="txtbox">
 		  <input type="expense" name="expense" class="form-control" id="expense" placeholder="Amount">
 		</div>
-		<div>
-		  <input type="note" name="note" class="form-control" id="note" placeholder="Note">
+		<div class="txtbox">
+		  <input type="note" name="note" class="form-control" id="note" aria-describedby="emailHelp" placeholder="Note">
 		</div>
 		<div>
 	<!--    <button type="submit" id="submit"  class="btn btn-primary">Submit</button> 
 	-->
 		<button type="submit" id="submit"  class="submitbtn btn-primary">Submit</button>
 		</div>
-		div class="txtbox">
-		<span class="title2 text-muted confirm"></span>
+			<div class="txtbox">
+		  <small class="form-text text-muted confirm"></small>
 		</div>
 	</form>
 </body>
@@ -125,7 +82,7 @@ transition: background-color 1000ms, color 1000ms;
 			dataType: "json",
 			data: form.serializeObject()
 		  });
-			$(".confirm").html("Successfully Submitted");
+			$(".confirm").html("Successfully Submitted").css("font-size","12px");
 		  });
 		});
 </script>
