@@ -1,110 +1,25 @@
-<!DOCTYPE html>
-<html>
-<title>True Balance</title>
-<style>
-	.pagestyle {
-	margin: 0;
-	}
-	.topbar {
-	background-color: #23b7e5;
-	height: 30px;
-	font-size: 20px;
-	padding: 15px 15px;
-	color: #f2f2f2;
-	font-family: Arial;
-	}
-	.dashboard {
-	display: flex;
-	}
-	.userpanel {
-	flex: 15%;
-	flex-direction: column;
-	background-color:#0e161f;
-	}
-	.mainbody {
-	flex: 85%;
-	background-color: #16202f;
-	}
-	.subheader {
-	color: #797d84;
-	font-family: Arial;
-	margin: 16px;
-	}
-	.dropbtn {
-	text-align: left;
-	background-color: #0e161f;
-	color: white;
-	padding: 16px;
-	font-size: 16px;
-	border: none;
-	width: 100%;
-	}
-	.dropbtn:after {
-	content: '\02795';
-	font-size: 13px;
-	color: white;
-	float: right;
-	margin-left: 5px;
-	}
-	.active:after {
-	content: "\2796";
-	}
-	.dropdown {
-	position: relative;
-	display: inline-block;
-	width: 100%;
-	}
-	.dropdown-content {
-	font-family: Arial;
-	display: none;
-	position: relative;
-	background-color: #080d12;
-	wdith: 100%;
-	z-index: 1;
-	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-	}
-	.dropdown-button:hover
-	{
-	background-color: #23b7e5;
-	}
-	.show {
-	display: block;
-	}
-</style>
+<form id="main">
+  <div>
+    <label>Field 1</label>
+    <input type="text" name="form_field_1" placeholder="Field 1"/>
+  </div>
 
-<div class="topbar">
-	<body>TRUE BALANCE</body>
-</div>
-<div class="dashboard">
-	<body class="pagestyle">
-		<div class="userpanel">
-			<div class="subheader">User Panel</div>
-				<div class="dropdown">
-					<button id="dd1btn" class="dropbtn" onclick="showdd1()">Option 1</button>
-					<div id="dd1drop" class="dropdown-content">
-						<button class="dropdown-button">dropdown option 1</button>
-						<button class="dropdown-button">dropdown option 2</button>
-						<button class="dropdown-button">dropdown option 3</button>
-					</div>
-					<button class="dropbtn">Option 2</button>
-					<button class="dropbtn">Option 3</button>
-				</div>
-			</div>
-		<div class="mainbody">
-		PushTest3
-		</div>
-	</body>
-</div>
+  <div>
+    <label>Field 2</label>
+    <input type="text" name="form_field_2" placeholder="Field 2"/>
+  </div>
+  
+  <div>
+    <label>Field 3</label>
+    <input type="text" name="form_field_3" placeholder="Field 3"/>
+  </div>
+  
+  <div>
+    <label>Field 4</label>
+    <input type="text" name="form_field_4" placeholder="Field 4"/>
+  </div>
 
-<script type="javascript">
-function showdd1()
-{
-	document.getElementById(dd1drop).classList.toggle("show");
-	document.getElementbyId(dd1btn).classList.toggle("active");
-}
-function showdd2()
-{
-
-}
-</script>
-</html>
+  <div>
+    <button type="submit"id="submit-form">Submit</button>
+  </div>
+</form>
