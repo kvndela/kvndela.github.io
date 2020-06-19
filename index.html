@@ -42,11 +42,16 @@
 	outline: 0;
 	background: transparent;
 	border-bottom: 1px solid #ecf0f1;
+	color: white;
 	}
 	.currentbalance {
 	text-align: center;
 	color: white;
 	font-size: 30;
+	}
+	.formstyle {
+	align-content: center;
+	text-align: center;
 	}
 </style>
 
@@ -58,19 +63,14 @@
 <body>
 	<div class="header">True Balance</div>
 	<pre id='data' class="currentbalance"></pre>
-	<form id="test-form">
-		<a class="footer">version 1.16</a>
-		<div class="form-control">
-		  <input type="expense" name="expense" class="txtbox" id="expense" placeholder="Amount">
-		</div>
-		<div class="form-control">
-		  <input type="note" name="note" class="txtbox" id="note" placeholder="Note">
-		</div>
-		<div>
+	<form class="formstyle" 
+	      id="test-form">
+		<input type="expense" name="expense" class="txtbox" id="expense" placeholder="Amount">
+		<input type="note" name="note" class="txtbox" id="note" placeholder="Note">
 		<button type="submit" id="submit"  class="submitbtn btn-primary">Submit</button>
-		</div>
 		<small class="text-muted confirm"></small>
 	</form>
+	<a class="footer">version 1.16</a>
 </body>
 
 <script>
