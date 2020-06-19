@@ -9,11 +9,12 @@
 	background-image: linear-gradient(to bottom, #202e44 0%, #202e44 40%, #ecf0f1 40%, #ecf0f1 100%);
     	background-size: cover;
     	background-repeat: no-repeat;
+	align-content: center;
 	}
 	.header {
 	text-align: center;
 	font-family: Century Gothic;
-	font-size: 20;
+	font-size: 40;
 	color: white;		
 	}
 	.footer {
@@ -42,6 +43,11 @@
 	background: transparent;
 	border-bottom: 1px solid #ecf0f1;
 	}
+	.currentbalance {
+	text-align: center;
+	color: white;
+	font-size: 30;
+	}
 </style>
 
 <head>
@@ -51,6 +57,7 @@
 
 <body>
 	<div class="header">True Balance</div>
+	<pre id='data' class="currentbalance"></pre>
 	<form id="test-form">
 		<a class="footer">version 1.16</a>
 		<div class="form-control">
@@ -62,7 +69,6 @@
 		<div>
 		<button type="submit" id="submit"  class="submitbtn btn-primary">Submit</button>
 		</div>
-		<pre id='data'></pre>
 		<small class="text-muted confirm"></small>
 	</form>
 </body>
