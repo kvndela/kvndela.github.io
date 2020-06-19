@@ -74,10 +74,10 @@
 </body>
 
 <script>
-  const onDataLoaded = (data) => {
-    const total = data.feed.entry.find((entry) => entry.title.$t == 'D2').content.$t
-    document.getElementById('data').innerHTML = total
-  }
+	const onDataLoaded = (data) => {
+	const total = data.feed.entry.find((entry) => entry.title.$t == 'D2').content.$t
+	document.getElementById('data').innerHTML = total
+	}
 </script>	
 <script src="https://spreadsheets.google.com/feeds/cells/1IYOk1F3aN4d9_4I4z6edNZt-gVFIet6qOuz1IVF6d8A/1/public/basic?alt=json-in-script&callback=onDataLoaded"></script>	
 <script>
