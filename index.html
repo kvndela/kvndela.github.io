@@ -87,13 +87,14 @@
 		<br>
 		<small class="text-muted confirm"></small>
 	</form>
-	<a class="footer">True Balance - version 1.22</a>
+	<a class="footer">True Balance - version 1.23</a>
 </body>
 
 <script>
 	const onDataLoaded = (data) => {
 	const total = data.feed.entry.find((entry) => entry.title.$t == 'D2').content.$t
 	document.getElementById('data').innerHTML = total
+	console.log("total: " + total);
 	}
 </script>	
 <script>
