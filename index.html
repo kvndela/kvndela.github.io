@@ -6,7 +6,7 @@
 	margin: 0px;
 	padding: 0px;
 	height: 100%;
-	background-image: linear-gradient(to bottom, #202e44 0%, #202e44 40%, #ecf0f1 40%, #ecf0f1 100%);
+	background-image: linear-gradient(to bottom, #202e44 0%, #202e44 45%, #dbdbdb 45%, #dbdbdb 100%);
 	background-size: cover;
 	background-repeat: no-repeat;
 	align-content: center;
@@ -14,7 +14,7 @@
 	.header {
 	text-align: center;
 	font-family: Helvetica;
-	font-size: 40px;
+	font-size: 30px;
 	color: white;		
 	}
 	.footer {
@@ -48,6 +48,7 @@
 	color: white;
 	}
 	.currentbalance {
+	font-family: Arial;
 	text-align: center;
 	color: white;
 	font-size: 30px !important;
@@ -57,6 +58,10 @@
 	text-align: center;
 	display: flex;
 	flex-direction: column;
+	}
+	.label {
+	font-size: 8px;
+	color: #dbdbdb;
 	}
 </style>
 
@@ -68,6 +73,7 @@
 <body>
 	<a class="header">True Balance</a>
 	<pre id='data' class="currentbalance"></pre>
+	<a class="label">Current Balance</a>
 	<form class="formstyle" id="test-form">
 		<input type="expense" name="expense" class="txtbox" id="expense" placeholder="Amount">
 		<input type="note" name="note" class="txtbox" id="note" placeholder="Note">
@@ -75,7 +81,7 @@
 		<br>
 		<small class="text-muted confirm"></small>
 	</form>
-	<a class="footer">version 1.16</a>
+	<a class="footer">version 1.17</a>
 </body>
 
 <script>
