@@ -82,7 +82,7 @@
 	<form class="formstyle" id="test-form">
 		<input type="expense" name="expense" class="txtbox" id="expense" placeholder="Amount">
 		<input type="note" name="note" class="txtbox" id="note" placeholder="Note">
-		<button type="submit" id="submit"  class="submitbtn btn-primary" onclick="setTimeout(function () { window.location.reload(); }, 2)">Submit</button>
+		<button type="submit" id="submit"  class="submitbtn btn-primary">Submit</button>
 		<br>
 		<small class="text-muted confirm"></small>
 	</form>
@@ -93,7 +93,6 @@
 	const onDataLoaded = (data) => {
 	const total = data.feed.entry.find((entry) => entry.title.$t == 'D2').content.$t
 	document.getElementById('data').innerHTML = total
-	console.log("total: " + total);
 	}
 </script>	
 <script src="https://spreadsheets.google.com/feeds/cells/1IYOk1F3aN4d9_4I4z6edNZt-gVFIet6qOuz1IVF6d8A/1/public/basic?alt=json-in-script&callback=onDataLoaded"></script>
