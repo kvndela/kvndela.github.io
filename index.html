@@ -6,7 +6,7 @@
 	margin: 0px;
 	padding: 0px;
 	height: 100%;
-	background-image: linear-gradient(to bottom, #202e44 0%, #202e44 45%, #dbdbdb 45%, #dbdbdb 100%);
+	background-image: linear-gradient(to bottom, #202e44 0%, #202e44 47%, #dbdbdb 47%, #dbdbdb 100%);
 	background-size: cover;
 	background-repeat: no-repeat;
 	align-content: center;
@@ -63,6 +63,7 @@
 	color: #dbdbdb;
 	}
 	.confirm {
+	font-family: Arial;
 	font-size: 12px;
 	color: green;
 	}
@@ -71,6 +72,7 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+<script src="https://spreadsheets.google.com/feeds/cells/1IYOk1F3aN4d9_4I4z6edNZt-gVFIet6qOuz1IVF6d8A/1/public/basic?alt=json-in-script&callback=onDataLoaded"></script>	
 </head>
 
 <body>
@@ -85,7 +87,7 @@
 		<br>
 		<small class="text-muted confirm"></small>
 	</form>
-	<a class="footer">True Balance - version 1.21</a>
+	<a class="footer">True Balance - version 1.22</a>
 </body>
 
 <script>
@@ -94,7 +96,6 @@
 	document.getElementById('data').innerHTML = total
 	}
 </script>	
-<script src="https://spreadsheets.google.com/feeds/cells/1IYOk1F3aN4d9_4I4z6edNZt-gVFIet6qOuz1IVF6d8A/1/public/basic?alt=json-in-script&callback=onDataLoaded"></script>	
 <script>
 	$(document).ready(function(){
 	  $.fn.serializeObject = function()
