@@ -30,14 +30,17 @@
 	.submitbtn {
 	background-color: #23b7e5;
 	height: 30px;
-	width: 50%;
+	width: 40%;
 	color: white;
 	border: none;
 	text-decoration: none;
+	margin: 15px 0px;
 	}
 	.txtbox {
+	-webkit-appearance: none;
+	border-radius: 0;
 	width: 50%;
-	margin: 5px;
+	margin: 10px;
 	border: 0;
 	outline: 0;
 	background: transparent;
@@ -47,7 +50,7 @@
 	.currentbalance {
 	text-align: center;
 	color: white;
-	font-size: 30;
+	font-size: 30 !important;
 	}
 	.formstyle {
 	align-content: center;
@@ -63,14 +66,14 @@
 <body>
 	<a class="header">True Balance</a>
 	<pre id='data' class="currentbalance"></pre>
-	<form class="formstyle" 
-	      id="test-form">
-		<textarea type="expense" name="expense" class="txtbox" id="expense">Expense</textarea>
-		<textarea type="note" name="note" class="txtbox" id="note">Amount</textarea>
+	<form class="formstyle" id="test-form">
+		<input type="expense" name="expense" class="txtbox" id="expense" placeholder="Amount">
+		<input type="note" name="note" class="txtbox" id="note" placeholder="Note">
 		<button type="submit" id="submit"  class="submitbtn btn-primary">Submit</button>
+		<br>
 		<small class="text-muted confirm"></small>
 	</form>
-	<a class="footer">version 1.17</a>
+	<a class="footer">version 1.16</a>
 </body>
 
 <script>
@@ -108,7 +111,7 @@
 			dataType: "json",
 			data: form.serializeObject()
 		  });
-			$(".confirm").html("Successfully Submitted").css("font-size","12px");
+			$(".confirm").html("Successfully Submitted").css("font-size","12px","green");
 		  });
 		});
 </script>
