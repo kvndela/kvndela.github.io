@@ -43,7 +43,7 @@
 	color: white;
 	}
 	.currentbalance {
-	margin-top: 40px;
+	margin-top: 45px;
 	font-family: Arial;
 	text-align: center;
 	color: white;
@@ -69,8 +69,10 @@
 </head>
 
 <body>
-	<pre id='data' class="currentbalance"></pre>
-	<a class="label">Current Balance</a>
+	<div style="text-align: center">
+		<pre id='data' class="currentbalance"></pre>
+		<a class="label">Current Balance</a>
+	</div>
 	<form class="formstyle" id="test-form">
 		<input type="expense" name="expense" class="txtbox" id="expense" placeholder="Amount">
 		<input type="note" name="note" class="txtbox" id="note" placeholder="Note">
@@ -78,7 +80,7 @@
 		<br>
 		<small class="text-muted confirm"></small>
 	</form>
-	<a class="footer">True Balance - version 1.19</a>
+	<a class="footer">True Balance - version 1.20</a>
 </body>
 
 <script>
