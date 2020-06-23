@@ -122,14 +122,7 @@
 			url: url,
 			method: "GET",
 			dataType: "json",
-			data: form.serializeObject(),
-			success: function(data){
-				if(data.success == true){
-					setTimeout(function(){
-						location.reload();
-      						}, 3000); 
-   					}
-				}
+			data: form.serializeObject()
 		  });
 			$(".confirm").html("Successfully Submitted");
 		  });
